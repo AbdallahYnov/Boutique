@@ -42,9 +42,9 @@ func InitServe() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "/" {
 			controller.NotFoundPageHandler(w, r)
-		} else {
-			controller.IndexHandler(w, r)
-		}
+		} //  else {
+		// 	controller.IndexHandler(w, r)
+		// }
 	})
 
 	if err := http.ListenAndServe(controller.Port, nil); err != nil {
